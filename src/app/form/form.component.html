@@ -1,0 +1,32 @@
+<div class="col-md-6">
+
+  <form  [formGroup]="regForm"  (ngSubmit)="postData(regForm.value)"  class="well form-horizontal"  method="post"  id="contact_form" >
+    
+    <div class="form-group">
+      <label for="email">User Name</label>
+      <input type="text" class="form-control"  placeholder="Enter username" formControlName="uname">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control"  placeholder="Enter password" formControlName="pwd">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control"  placeholder="Enter email" formControlName="email">
+    </div>
+
+    <div class="form-group">
+      <label for="pwd">Country</label>
+      <select class="form-control" formControlName="country">
+        <option>India</option>
+        <option>Pak</option>
+        <option>USA</option>
+      </select>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <button class="btn btn-default">Submit</button>
+  </form>
+</div>
